@@ -70,4 +70,4 @@
 ## 부칙
 본 약관은 시행일부터 적용됩니다.
 
-문의: seol0211ee@gmail.com
+문의: dy68427@gmail.com

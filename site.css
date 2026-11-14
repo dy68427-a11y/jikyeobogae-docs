@@ -159,3 +159,7 @@ button.btn { font-family: inherit; cursor: pointer; }
 .stores .apple, .stores .google { height: 54px; margin: 0; }
 .hero .stores .apple, .hero .stores .google { height: 62px; margin: 0; }
 @media (max-width: 720px) { .hero .stores .apple, .hero .stores .google { height: 50px; margin: 0; } }
+
+/* 줄바꿈: 한 낱말만 다음 줄에 남지 않도록 줄 길이를 고르게 나눈다 */
+h1, h2, .lead, .sub, .card p, .step p, .note { text-wrap: balance; }
+.feature p, .story p, .faq p { text-wrap: pretty; }

@@ -1,0 +1,161 @@
+/* Why: 소개 페이지와 사장님 안내 페이지가 같은 모양을 쓰도록 한 파일에 모은다. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --cream: #FFF3E6; --orange: #F5500A; --brown: #2B1A10; --soft: rgba(43,26,16,.62); --line: rgba(43,26,16,.12); }
+html { scroll-behavior: smooth; }
+body { font-family: "Pretendard", "Malgun Gothic", system-ui, sans-serif; color: var(--brown); background: #fff; line-height: 1.6; word-break: keep-all; }
+a { color: inherit; }
+img, video { max-width: 100%; display: block; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* 맨 위 띠 */
+.top { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; text-decoration: none; }
+.brand img { width: 32px; height: 32px; border-radius: 9px; }
+.top nav { display: flex; align-items: center; gap: 16px; font-size: 15px; }
+.top nav a { text-decoration: none; }
+
+/* 버튼 */
+.btn { display: inline-block; padding: 14px 26px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; }
+.btn.primary { background: var(--orange); color: #fff; }
+.btn.line { background: #fff; border: 1px solid var(--line); }
+.btn.small { padding: 9px 16px; font-size: 14px; border-radius: 10px; }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* 첫 화면 */
+.hero { background: var(--cream); padding: 56px 0 0; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: center; }
+.hero h1 { font-size: 46px; line-height: 1.22; letter-spacing: -1.5px; font-weight: 800; }
+.hero h1 em { font-style: normal; color: var(--orange); }
+.hero .sub { font-size: 19px; color: var(--soft); margin: 14px 0 28px; }
+.hero .phone { align-self: end; }
+.hero .photo { border-radius: 32px; aspect-ratio: 1; object-fit: cover; margin-bottom: 56px; }
+.hero.flat { padding-bottom: 56px; }
+
+/* 구역 공통 */
+section { padding: 72px 0; }
+section.tint { background: var(--cream); }
+h2 { font-size: 30px; letter-spacing: -0.8px; line-height: 1.3; font-weight: 800; }
+.lead { font-size: 17px; color: var(--soft); margin-top: 10px; max-width: 520px; }
+.center { text-align: center; }
+.center .lead { margin-left: auto; margin-right: auto; }
+.center .btns { justify-content: center; }
+.note { font-size: 13px; color: var(--soft); margin-top: 18px; }
+
+/* 기능: 사진 + 짧은 글 */
+.feature { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; padding: 28px 0; }
+.feature.flip { grid-template-columns: 1fr 260px; }
+.feature.flip .shot { order: 2; }
+.feature .num { font-size: 14px; font-weight: 800; color: var(--orange); margin-bottom: 8px; }
+.feature p { font-size: 17px; color: var(--soft); margin-top: 10px; max-width: 420px; }
+
+/* 설이 이야기 */
+.story .wrap { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
+.story img { border-radius: 50%; aspect-ratio: 1; object-fit: cover; }
+.story p { font-size: 17px; color: var(--soft); margin-top: 14px; max-width: 560px; line-height: 1.75; }
+
+/* 카드 묶음 */
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; }
+.card .ico { font-size: 26px; }
+.card h3 { font-size: 17px; margin: 10px 0 4px; }
+.card p { font-size: 14px; color: var(--soft); }
+
+/* 순서 3단계 */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; counter-reset: step; }
+.step { background: var(--cream); border-radius: 18px; padding: 22px 18px; }
+.step::before { counter-increment: step; content: counter(step); display: inline-flex; width: 30px; height: 30px; border-radius: 50%; background: var(--orange); color: #fff; font-weight: 800; align-items: center; justify-content: center; margin-bottom: 12px; }
+.step h3 { font-size: 17px; }
+.step p { font-size: 14px; color: var(--soft); margin-top: 4px; }
+
+/* 영상 */
+.reel { max-width: 300px; margin: 32px auto 0; border-radius: 22px; overflow: hidden; box-shadow: 0 12px 32px rgba(43,26,16,.16); }
+
+/* 질문과 답 */
+.faq { max-width: 640px; margin: 28px auto 0; text-align: left; }
+.faq details { border-bottom: 1px solid var(--line); padding: 18px 4px; }
+.faq summary { font-size: 17px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--orange); font-weight: 800; }
+.faq details[open] summary::after { content: "−"; }
+.faq p { font-size: 16px; color: var(--soft); margin-top: 10px; }
+
+/* 맨 아래 */
+footer { background: var(--brown); color: rgba(255,255,255,.72); padding: 40px 0 56px; font-size: 13px; line-height: 1.9; }
+footer strong { color: #fff; font-size: 15px; }
+footer a { color: rgba(255,255,255,.9); }
+footer .links { margin: 12px 0; }
+
+@media (max-width: 720px) {
+  .hero { padding-top: 40px; }
+  .hero .wrap, .feature, .feature.flip, .story .wrap { grid-template-columns: 1fr; gap: 24px; }
+  .hero h1 { font-size: 36px; }
+  .hero .phone, .hero .photo { max-width: 240px; margin: 0 auto 40px; }
+  .feature .shot, .feature.flip .shot { order: 0; max-width: 220px; margin: 0 auto; }
+  .story img { max-width: 180px; margin: 0 auto; }
+  section { padding: 52px 0; }
+  h2 { font-size: 25px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: 1fr; }
+  .top nav .hide-s { display: none; }
+}
+
+/* 실제 화면 사진 카드 */
+.card.shotcard { padding: 0 0 18px; overflow: hidden; }
+.card.shotcard img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+.card.shotcard h3, .card.shotcard p { padding: 0 16px; }
+.card.shotcard h3 { margin-top: 14px; }
+.story p.key { font-weight: 700; color: var(--brown); }
+
+/* 스토어 배지: 구글 그림은 자체 여백이 있어 크게 놓고 여백만큼 당긴다 */
+.stores { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.stores .apple { height: 54px; }
+.stores .google { height: 78px; margin: -12px -8px; }
+.center .stores { justify-content: center; margin-top: 20px; }
+
+/* 참고 사이트식 첫 화면: 작은 소개글, 강조 낱말 상자, 큰 배지 */
+.hero { background: linear-gradient(135deg, #FFF8EF 0%, var(--cream) 45%, #FFE2C7 100%); }
+.eyebrow { font-size: 16px; font-weight: 800; color: var(--orange); margin-bottom: 12px; }
+.hero h1 { font-size: 56px; }
+.hero h1 em { background: var(--orange); color: #fff; padding: 0 14px 4px; border-radius: 14px; display: inline-block; margin-top: 6px; }
+.hero .stores .apple { height: 62px; }
+.hero .stores .google { height: 90px; margin: -14px -9px; }
+.hero .note { margin-top: 14px; }
+.hero .note strong { color: var(--brown); }
+.ownerlink { margin-top: 14px; font-size: 14px; font-weight: 700; }
+.hero .photo { box-shadow: 0 18px 40px rgba(43,26,16,.18); }
+
+/* 화면 사진을 담는 둥근 판 */
+.shot.panel { position: relative; background: var(--cream); border-radius: 28px; padding: 44px 28px 28px; }
+.shot.panel img { border-radius: 18px; box-shadow: 0 12px 28px rgba(43,26,16,.16); }
+.shot.panel .tag { position: absolute; top: 14px; left: 16px; font-size: 12px; font-weight: 700; background: #fff; border-radius: 999px; padding: 3px 10px; color: var(--soft); }
+.feature { grid-template-columns: 340px 1fr; }
+.feature.flip { grid-template-columns: 1fr 340px; }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 40px; }
+  .feature, .feature.flip { grid-template-columns: 1fr; }
+  .feature .shot.panel, .feature.flip .shot.panel { max-width: 280px; }
+  .hero .stores .apple { height: 52px; }
+  .hero .stores .google { height: 76px; margin: -12px -8px; }
+}
+.hero { padding-bottom: 56px; }
+.hero .photo { margin-bottom: 0; }
+.feature { grid-template-columns: 300px 1fr; }
+.feature.flip { grid-template-columns: 1fr 300px; }
+@media (max-width: 720px) { .feature, .feature.flip { grid-template-columns: 1fr; } .hero .photo { margin-bottom: 0; } }
+
+/* 고객센터 카드 */
+.support { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 32px auto 0; text-align: left; }
+.support .card { padding: 24px 22px; }
+.support .card h3 { margin: 0; font-size: 14px; color: var(--orange); }
+.support .card .big { font-size: 19px; font-weight: 800; color: var(--brown); margin: 6px 0 4px; word-break: break-all; }
+.support .btns { margin-top: 16px; }
+button.btn { font-family: inherit; cursor: pointer; }
+@media (max-width: 720px) { .support { grid-template-columns: 1fr; } }
+.center .support .btns { justify-content: flex-start; }
+.btn.kakao { background: #FEE500; color: #191600; }
+
+/* 스토어 배지 높이 통일: 구글 그림의 투명 여백을 잘라 낸 파일을 써서 두 배지를 같은 높이로 놓는다 */
+.stores .apple, .stores .google { height: 54px; margin: 0; }
+.hero .stores .apple, .hero .stores .google { height: 62px; margin: 0; }
+@media (max-width: 720px) { .hero .stores .apple, .hero .stores .google { height: 50px; margin: 0; } }

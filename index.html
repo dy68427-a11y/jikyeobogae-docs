@@ -3,89 +3,138 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>지켜보개 — 우리 아이 미용, 라이브로 지켜보다</title>
-<meta name="description" content="반려견 미용을 실시간 라이브로 지켜보는 예약 앱, 지켜보개. 예약부터 알림장까지 한 번에.">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root { --primary: #FF5A00; --tint: #FFF1E8; --dark: #242528; --gray: #9A9DA3; --line: #EAEBED; }
-  body { font-family: "Pretendard", "Malgun Gothic", system-ui, sans-serif; color: var(--dark); line-height: 1.6; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 72px 0 56px; text-align: center; background: linear-gradient(180deg, var(--tint), #fff); }
-  header img { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 8px 24px rgba(255,90,0,.18); }
-  h1 { font-size: 32px; margin: 20px 0 8px; letter-spacing: -0.5px; }
-  .tagline { font-size: 17px; color: var(--gray); }
-  .badge { display: inline-block; margin-top: 16px; background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; }
-  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
-  h2 { font-size: 21px; margin-bottom: 20px; }
-  .feature { display: flex; gap: 14px; margin-bottom: 22px; align-items: flex-start; }
-  .feature .ico { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--tint); display: flex; align-items: center; justify-content: center; font-size: 22px; }
-  .feature h3 { font-size: 16px; margin-bottom: 2px; }
-  .feature p { font-size: 14px; color: var(--gray); }
-  .shop { background: var(--tint); border-radius: 16px; padding: 24px; }
-  .shop h2 { margin-bottom: 10px; }
-  .shop p { font-size: 14px; margin-bottom: 6px; }
-  footer { padding: 40px 0 60px; font-size: 13px; color: var(--gray); text-align: center; }
-  footer a { color: var(--gray); }
-  .cta { margin-top: 12px; font-size: 14px; }
-</style>
+<title>지켜보개 — 보면서 맡기는 미용</title>
+<meta name="description" content="반려견 미용 예약 앱 지켜보개. 미용하는 동안 라이브로 보고, 예약과 알림장을 앱에서 받습니다.">
+<meta property="og:title" content="지켜보개 — 보면서 맡기는 미용">
+<meta property="og:description" content="견주가 고심하고 직접 만든 미용 예약 앱, 지켜보개">
+<meta property="og:image" content="https://jikyeobogae.co.kr/icon.png">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header>
+
+<div class="top">
   <div class="wrap">
-    <img src="icon.png" alt="지켜보개 앱 아이콘">
-    <h1>지켜보개</h1>
-    <p class="tagline">우리 아이 미용, 이제 눈으로 확인하세요</p>
-    <a class="badge" href="app.html" style="text-decoration:none">앱 받기 · 안드로이드·아이폰</a>
+    <a class="brand" href="./"><img src="icon.png" alt="">지켜보개</a>
+    <nav>
+      <a class="hide-s" href="shop.html">미용샵 사장님</a>
+      <a class="hide-s" href="#support">고객센터</a>
+      <a class="btn primary small" href="app.html">앱 받기</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">반려견 미용 예약 앱 지켜보개</p>
+      <h1>보면서 맡기는<br><em>미용</em></h1>
+      <p class="sub">견주가 고심하고 직접 만든 미용 예약 앱</p>
+      <div class="stores">
+        <a href="https://apps.apple.com/kr/app/id6799382952"><img class="apple" src="img/badge-appstore.svg" alt="App Store에서 다운로드"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.jikyeobogae.app"><img class="google" src="img/badge-googleplay-trim.png" alt="Google Play에서 다운로드"></a>
+      </div>
+      <p class="note"><strong>무료</strong> · 아이폰 · 안드로이드</p>
+      <p class="ownerlink"><a href="shop.html">미용샵 사장님이신가요? 입점 안내 →</a></p>
+    </div>
+    <img class="photo" src="img/seoli.jpg" alt="잔디 위에서 웃는 비숑 설이">
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>어떤 앱인가요?</h2>
-    <div class="feature"><div class="ico">📹</div><div>
-      <h3>실시간 라이브 미용 중계</h3>
-      <p>미용받는 모습을 견주의 폰으로 실시간 시청. 영상은 저장되지 않고, 내 아이 라이브는 나만 볼 수 있어요.</p>
-    </div></div>
-    <div class="feature"><div class="ico">📅</div><div>
-      <h3>간편한 미용 예약</h3>
-      <p>주변 미용샵을 지도에서 찾고, 원하는 스타일 사진과 함께 예약. 재예약 시기도 알림으로 챙겨드려요.</p>
-    </div></div>
-    <div class="feature"><div class="ico">📋</div><div>
-      <h3>미용 알림장</h3>
-      <p>미용 후 비포·애프터 사진과 발톱·귀·피부 케어 체크리스트를 받아보세요. 기록이 쌓이면 우리 아이 미용 히스토리가 돼요.</p>
-    </div></div>
-    <div class="feature"><div class="ico">🤖</div><div>
-      <h3>AI 미용 상담</h3>
-      <p>견종별 미용 주기, 털 관리법이 궁금할 땐 AI에게 바로 물어보세요.</p>
-    </div></div>
-    <div class="feature"><div class="ico">✅</div><div>
-      <h3>검증된 미용샵</h3>
-      <p>국세청 사업자 진위확인을 거친 실제 미용샵만 입점합니다.</p>
-    </div></div>
+    <div class="feature">
+      <div class="shot panel"><span class="tag">화면 예시</span><img src="img/shot1.jpg" alt="라이브 표시가 있는 샵 화면 예시"></div>
+      <div>
+        <p class="num">01</p>
+        <h2>미용은 라이브로</h2>
+        <p>라이브를 켜는 샵에서는 미용하는 동안 내 아이를 볼 수 있어요. 예약한 보호자만 보고, 녹화되지 않아요.</p>
+      </div>
+    </div>
+    <div class="feature flip">
+      <div class="shot panel"><span class="tag">화면 예시</span><img src="img/shot3.jpg" alt="예약 시간 선택 화면 예시"></div>
+      <div>
+        <p class="num">02</p>
+        <h2>예약은 앱에서</h2>
+        <p>비어 있는 시간만 골라 예약해요.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="shot panel"><span class="tag">화면 예시</span><img src="img/shot5.jpg" alt="알림장과 이용 내역 화면 예시"></div>
+      <div>
+        <p class="num">03</p>
+        <h2>기록은 한곳에</h2>
+        <p>미용 후 알림장과 이용 내역을 모아 봐요.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="tint center">
   <div class="wrap">
-    <div class="shop">
-      <h2>미용샵 사장님이신가요? ✂️</h2>
-      <p>· 입점비 0원 — 파일럿 기간 수수료 0%</p>
-      <p>· 라이브 한 번이 최고의 신뢰 마케팅</p>
-      <p>· 예약 관리 + 알림장 + 고객 채팅까지 한 앱에서</p>
-      <p class="cta"><strong>파일럿 입점 문의: dy68427@gmail.com</strong></p>
+    <h2>가고 싶은 샵, 앱으로</h2>
+    <p class="lead">지금은 입점 샵을 모으는 중이에요. 앱에서 가고 싶은 샵에 하트를 눌러주세요. 하트가 많이 모인 샵부터 지켜보개가 직접 입점을 요청해요.</p>
+    <div class="stores">
+      <a href="https://apps.apple.com/kr/app/id6799382952"><img class="apple" src="img/badge-appstore.svg" alt="App Store에서 다운로드"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.jikyeobogae.app"><img class="google" src="img/badge-googleplay-trim.png" alt="Google Play에서 다운로드"></a>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <img src="img/seoli2.jpg" alt="미용을 마친 비숑 설이">
+    <div>
+      <h2>설이 덕분에 시작된 이야기 🧡</h2>
+      <p>18년이라는 긴 시간을 함께한 티즈가 무지개다리를 건넜어요. 그리고 1년 뒤, 새로운 인연으로 유기견 3살 설이를 가족으로 맞이했어요.</p>
+      <p>설이를 만나고 반려견을 위한 것들을 하나씩 알아가면서 문득 이런 생각이 들었어요.</p>
+      <p class="key">좋은 마음으로 정직하게 일하는 사장님들이 억울한 오해를 받지 않았으면 좋겠고, 반려견을 사랑하는 견주들도 불필요한 걱정과 불안 없이 믿고 선택할 수 있었으면 좋겠다고요.</p>
+      <p>전문가도 아니고 대단한 사람도 아니지만, 제가 할 수 있는 작은 일부터 시작해 보기로 했어요.</p>
+      <p>그렇게 설이 덕분에 이 앱을 만들게 되었어요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint center">
+  <div class="wrap">
+    <h2>미용샵 사장님이라면</h2>
+    <p class="lead">예약·알림장·매출 정리까지 전부 무료</p>
+    <div class="btns" style="margin-top:24px"><a class="btn line" href="shop.html">사장님 안내 보기</a></div>
+  </div>
+</section>
+
+<section class="center" id="support">
+  <div class="wrap">
+    <p class="eyebrow">고객센터</p>
+    <h2>궁금한 점은 편하게</h2>
+    <p class="lead">앱 사용 문의, 오류 제보, 제안 모두 받아요. 대표가 직접 답해요.</p>
+    <div class="support">
+      <div class="card"><h3>카카오톡</h3><p class="big">지켜보개 채널</p><p>채팅 버튼을 누르면 바로 대화창이 열려요.</p>
+        <div class="btns"><a class="btn kakao small" href="https://pf.kakao.com/_CXlfX/chat">카카오톡 채팅</a><a class="btn line small" href="https://pf.kakao.com/_CXlfX">채널 보기</a></div></div>
+      <div class="card"><h3>인스타그램</h3><p class="big">@jikyeobogae</p><p>메시지(DM)로 편하게 물어보세요.</p>
+        <div class="btns"><a class="btn primary small" href="https://www.instagram.com/jikyeobogae/">DM 보내기</a></div></div>
+      <div class="card"><h3>이메일</h3><p class="big">dy68427@gmail.com</p><p>길게 설명할 내용은 메일을 추천드려요.</p>
+        <div class="btns"><button class="btn line small" type="button" data-mail="dy68427@gmail.com" onclick="copyMail(this)">주소 복사</button><a class="btn line small" href="mailto:dy68427@gmail.com">메일 보내기</a></div></div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>지켜보개 · 대표 이윤솔 · 문의 dy68427@gmail.com</p>
-    <p style="margin-top:6px">
-      <a href="./privacy-policy.html">개인정보처리방침</a> ·
-      <a href="./terms-of-service.html">이용약관</a>
+    <strong>지켜보개</strong>
+    <p>대표 이윤솔 · 사업자등록번호 445-20-02378 · 통신판매업 신고번호 2026-인천검단-0571</p>
+    <p>인천광역시 검단구 서로3로 225 · 문의 dy68427@gmail.com</p>
+    <p class="links">
+      <a href="terms-of-service.html">이용약관</a> ·
+      <a href="privacy-policy.html">개인정보처리방침</a> ·
+      <a href="location-terms.html">위치기반서비스 이용약관</a>
     </p>
-    <p style="margin-top:6px">© 2026 지켜보개. 상표출원 40-2026-0138561</p>
+    <p>지켜보개는 통신판매중개자로서 통신판매의 당사자가 아니며, 미용 서비스의 예약·이행·환불 등에 관한 의무와 책임은 각 미용샵에 있습니다.</p>
+    <p>© 2026 지켜보개. 상표출원 40-2026-0138561</p>
   </div>
 </footer>
+
+<script src="site.js"></script>
 </body>
 </html>

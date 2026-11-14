@@ -163,3 +163,8 @@ button.btn { font-family: inherit; cursor: pointer; }
 /* 줄바꿈: 한 낱말만 다음 줄에 남지 않도록 줄 길이를 고르게 나눈다 */
 h1, h2, .lead, .sub, .card p, .step p, .note { text-wrap: balance; }
 .feature p, .story p, .faq p { text-wrap: pretty; }
+
+/* 맨 아래 사업자 정보: 항목 단위로만 줄바꿈 */
+footer .biz span { display: inline-block; white-space: nowrap; margin-right: 14px; }
+footer .links a { display: inline-block; white-space: nowrap; margin-right: 14px; }
+footer p { text-wrap: pretty; }
